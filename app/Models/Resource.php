@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Resource extends Model 
 {
-
     protected $table = 'resources';
     public $timestamps = true;
     protected $fillable = array('name', 'description', 'file', 'course_id');

@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Teacher extends Model 
+class Teacher extends Authenticatable
 {
-
+    use CanResetPassword;
     protected $table = 'teachers';
     public $timestamps = true;
     protected $fillable = array('name', 'type', 'image', 'age', 'gender', 'phone', 'email', 'cv', 'facebook_link', 'twitter_link', 'insta_link', 'tiktok_link', 'password');

@@ -24,4 +24,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::resource('teacher', 'TeacherController');
+Route::resource('parent', 'ParentController');
+Route::resource('student', 'StudentController');
+Route::resource('assistant', 'AssistantController');
+Route::resource('quiz', 'QuizController');
+Route::resource('course', 'CourseController');
+Route::resource('resource', 'ResourceController');
+Route::resource('cerificate', 'CerificateController');
+
 require __DIR__.'/auth.php';
